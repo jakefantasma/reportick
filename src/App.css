@@ -1,0 +1,49 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+.Cabecera {
+  display: flex;
+  background-color: gray;
+}
+.ContainerFormulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Formulario {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+input {
+  border: 1px;
+  padding: 5px;
+  cursor: pointer;
+  
+}
+.CardReg {
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 450px;
+}
+.ListadoTicks {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.CardGestion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.SubControl{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
