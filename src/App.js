@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 function App() {
   const [data, setdata] = useState({
     formulario: {
-      Fecha: "2022-02-27",
-      Codigo: "90909",
-      Nombre: "Carlos Caballeros",
-      NTicket: "1400020",
-      Asunto: "monitor",
-      Estado: "Resolved",
-      Departameto: "Claro",
-      Comentario: "Cambio de monitor",
+      Fecha: "",
+      Codigo: "",
+      Nombre: "",
+      NTicket: "",
+      Asunto: "",
+      Estado: "",
+      Departameto: "",
+      Comentario: "",
     },
     lista: [],
   });
@@ -165,7 +165,7 @@ function App() {
           <input
             type="text"
             name="Estado"
-            placeholder="Estado/"
+            placeholder="Estado"
             value={data.formulario.Estado}
             onChange={handlerchange}
           />

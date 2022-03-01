@@ -23,6 +23,7 @@ input {
   
 }
 .CardReg {
+  font-size: 11px;
   background-color: green;
   border: 1px solid black;
   border-radius: 5px;
