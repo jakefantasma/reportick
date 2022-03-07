@@ -90,22 +90,25 @@ function App() {
     localStorage.setItem("lista", JSON.stringify(tmp));
   }
   //handlerRemoveAll
-  function handlerRemoveAll(){
-    setdata({
-      ...data,
-      lista: [],
-      formulario: {
-        Fecha: "",
-        Codigo: "",
-        Nombre: "",
-        NTicket: "",
-        Asunto: "",
-        Estado: "",
-        Departameto: "",
-        Comentario: "",
-      },
-    });
-    localStorage.setItem("lista", JSON.stringify([]));
+  function handlerRemoveAll() {
+    const res = window.confirm("Se eliminaran todos");
+    if (res) {
+      setdata({
+        ...data,
+        lista: [],
+        formulario: {
+          Fecha: "",
+          Codigo: "",
+          Nombre: "",
+          NTicket: "",
+          Asunto: "",
+          Estado: "",
+          Departameto: "",
+          Comentario: "",
+        },
+      });
+      localStorage.setItem("lista", JSON.stringify([]));
+    }
   }
   //handler to inputs
   function handlerchange(ev) {
@@ -197,8 +200,18 @@ function App() {
         })}
       </div>
       <div className="SubControl">
-        <input type="button" value="exportar" onClick={handlerExport} style={{backgroundColor: "green", color: "white"}}/>
-        <input type="button" value="eliminar" onClick={handlerRemoveAll} style={{backgroundColor: "red", color: "white"}} />
+        <input
+          type="button"
+          value="exportar"
+          onClick={handlerExport}
+          style={{ backgroundColor: "green", color: "white" }}
+        />
+        <input
+          type="button"
+          value="eliminar"
+          onClick={handlerRemoveAll}
+          style={{ backgroundColor: "red", color: "white" }}
+        />
       </div>
     </div>
   );
